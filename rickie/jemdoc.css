@@ -13,23 +13,19 @@ body {
 }
 */
 html {
-  background-color: #545757ae; 
+  background-color: #545757ae;
 }
 
-body { 
+body {
   font-family: Georgia, serif;
   color: #000;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   text-align:left; /* for IE */
-  margin-top: 30px; 
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+	margin: 0 auto;
   padding-left:  50px;
   padding-right: 50px;
   padding-top: 10px;
   padding-bottom: 30px;
-  max-width: 960px;
 }
 
 #layout-menu {
@@ -43,6 +39,7 @@ body {
 	white-space: nowrap;
     text-align: left;
     vertical-align: top;
+	margin: 0 auto;
 }
 
 #layout-menu td {
@@ -58,6 +55,8 @@ body {
     background: white;
     text-align: left;
     vertical-align: top;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 #layout-menu a {

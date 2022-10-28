@@ -4,7 +4,7 @@
 <head>
 <link rel="shortcut icon" href="./pic/cv.png">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="keywords" content="Ruikai Lin, Lin Ruikai, Ruikai, NUS, National University of Singapore"> 
+<meta name="keywords" content="Ruikai Lin, Lin Ruikai, Ruikai, NUS, National University of Singapore">
 <meta name="description" content="Ruikai Lin&#39;s home page">
 <link rel="stylesheet" href="./rickie/jemdoc.css" type="text/css">
 <title>Ruikai Lin &#40Rickie&#41</title>
@@ -20,13 +20,13 @@
 <script>
 (function () {
     var colors = ["#D61C59", "#E7D84B", "#1B8798"];
-    characters = ["♬", "♪"];
+    const characters = ["♬", "♪"];
     // characters = ["🫁", "🫀", "🧠"];
     // characters = ["🀄︎", "🀌", "🀅", "🁚"];
-    elementGroup = [];
+    const elementGroup = [];
     class Element {
         constructor() {
-            num = Math.floor(Math.random() * characters.length);
+            const num = Math.floor(Math.random() * characters.length);
             this.character = characters[num];
             this.lifeSpan = 120;
             this.initialStyles = {
@@ -34,14 +34,14 @@
                 top: "0",
                 display: "block",
                 pointerEvents: "none",
-                "z-index": "10000000",
+                "z-index": "10",
                 fontSize: "25px",
                 "will-change": "transform",
                 color: "#000000"
             };
             this.init = function (x, y, color) {
                 this.velocity = { x: (Math.random() < .5 ? -1 : 1) * (Math.random() / 2), y: 1 };
-                this.position = { x: x - 10, y: y - 20 };
+                this.position = { x: x - 65, y: y - 20 };
                 this.initialStyles.color = color;
                 this.element = document.createElement("span");
                 this.element.innerHTML = this.character;
@@ -53,7 +53,7 @@
                 this.position.x += this.velocity.x;
                 this.position.y += this.velocity.y;
                 this.lifeSpan--;
-                this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + this.lifeSpan / 120 + ")";
+				this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0)";
             };
             this.die = function () {
                 this.element.parentNode.removeChild(this.element);
@@ -81,16 +81,16 @@
         }
     }
     function onMouseMove(t) {
-        num = Math.floor(Math.random() * colors.length);
+        const num = Math.floor(Math.random() * colors.length);
         CreateElement(t.clientX, t.clientY, colors[num]);
     }
     function CreateElement(x, y, color) {
-        var e = new Element;
+        let e = new Element;
         e.init(x, y, color);
         elementGroup.push(e);
     }
     function ApplyStyle(element, style) {
-        for (var i in style) {
+        for (const i in style) {
             element.style[i] = style[i];
         }
     }
@@ -122,9 +122,9 @@
 	<tbody>
 		<tr>
 			<td width="670">
-				<div id="toptitle">					
+				<div id="toptitle">
 					<h4>🧗‍♂️ Welcome to 林瑞凯's Homepage!</h4>
-					<h1>Ruikai Lin</h1> 
+					<h1>Ruikai Lin</h1>
 				</div>
 
 				<h3>M.Sc. Student</h3>
@@ -140,7 +140,7 @@
 					</p>
 				</p>
 
-				<p> 
+				<p>
 					<a href="https://www.linkedin.com/in/lin-ruikai-%E6%9E%97%E7%91%9E%E5%87%AF-801233253/" target="_blank"><img src="./pic/LinkedIn.png" height="30px" style="margin-bottom:-3px"></a>
 					<a href="https://github.com/RickieLim" target="_blank"><img src="./pic/github.jpg" height="30px" style="margin-bottom:-3px"></a>
 					<a href="https://blog.csdn.net/RickieLim" target="_blank"><img src="./pic/CSDN.png" height="30px" style="margin-bottom:-3px"></a>
@@ -171,7 +171,7 @@
 <h2>Short Bio & Research Interests &nbsp; &nbsp;   <a href="./rickie/LinRuikai.pdf" target="_blank">[Download my CV]</a></h2>
 <p>
 	I am currently a Master student at the <a href="https://medicine.nus.edu.sg/dbmi/" target="_blank">Department of Biomedical Informatics</a>, <a href="https://www.nus.edu.sg/" target="_blank">National University of Singapore</a>. I wish to pursue research in the interdisciplinary area of artificial intelligence and healthcare to advance non-invasive disease diagnosis and minimally invasive intervention via machine intelligence. Specifically, my research interests include, but are not limited to, Medical image analysis via deep learning, Computer vision, Extended reality, and Machine learning in general. Previously, I received the B.Eng degree in Computer Science and Technology from Northeast Forestry University in 2022, under the supervision from Prof. Zhaowen QIU, a leading expert of national "Ten Thousands Talent Program" in China.
-	
+
 </p>
 
 
@@ -408,7 +408,7 @@
 <div id="footer">
 	<div id="footer-text"></div>
 </div>
-	<p><center>  
+	<p><center>
 	<!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5kc1yci9jid&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=georgia&amp;l=0" async="async"></script>   THIS IS A BIG BIG EARTH -->
         Website &copy; Ruikai Lin under <b>CC BY-NC-SA 4.0 license</b>. All rights reserved. <b>|</b> Last updated on 26 Oct 2022.<br>
 		<i>Some projects will be hidden when a paper is under double-blind peer review.</i> <br>
