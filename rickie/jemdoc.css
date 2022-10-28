@@ -81,7 +81,10 @@ a, a > tt {
 
 a:hover {
 	border-bottom: 1px gray dotted;
+	color:rgb(95, 22, 68);
+	text-decoration:underline;
 }
+
 
 #layout-menu a.current:link, #layout-menu a.current:visited {
 	color: #022b6d;
