@@ -5,13 +5,7 @@ table#tlayout {
     border-collapse: separate;
     background: white;
 }
-/*
-body {
-	background: white;
-	padding-bottom: 8px;
-	margin: 0;
-}
-*/
+
 html {
   background-color: #545757ae;
 }
@@ -22,9 +16,6 @@ body {
   background-color: #ffffff;
   text-align:left; /* for IE */
 	margin: 0 auto;
-  padding-left:  50px;
-  padding-right: 50px;
-  padding-top: 10px;
   padding-bottom: 30px;
 }
 
@@ -111,6 +102,7 @@ div.menu-item {
 }
 
 div#toptitle {
+	margin-top: 40px;
 	padding-bottom: 0.2em;
 	margin-bottom: 1.5em;
 	/*border-bottom: 3px double gray;*/
