@@ -1,13 +1,25 @@
-.dropdownmenu ul, .dropdownmenu li {
-    margin: 0;
-    padding: 0;
+.dropdownmenu {
+    height: 40px;
+    text-align: center;
+}
+.fill{
+    width: 10000px;
+    left: 0;
+    height: 40px;
+}
+.dropdownmenu span {
+    background: #083147;
+    display: inline-block;
+    position: fixed;
 }
 .dropdownmenu ul {
+    transform: translate(-480px,0);
+    margin: 0 auto;
     background: gray;
     list-style: none;
-    width: 100%;
-    position: fixed;
+    width: 960px;
     display: flex;
+    padding-inline-start:0;
 }
 .dropdownmenu li {
     background: #083147;
@@ -17,16 +29,12 @@
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
-    -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    transition: all .25s ease;
     flex: 1 1;
     cursor: pointer;
+    margin: 0;
 }
-.dropdownmenu li:hover a {
-    background: #000000;
+.dropdownmenu li:hover {
+    background: #654321;
 }
 #submenu {
     left: 0;
