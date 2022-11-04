@@ -32,12 +32,11 @@
     flex: 1 1;
     cursor: pointer;
     margin: 0;
-    font-size:16px;
+    font-size:14px;
     font-family:"Lucida Console";
 }
 .dropdownmenu li:hover {
     background: #c99a6b;
-    height: 20px;
 }
 #submenu {
     left: 0;
