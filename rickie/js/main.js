@@ -20,7 +20,10 @@ function scroll(goal){
 // 传两个id进来，实现滚动跳转
 function scrollById(menuId, goalId){
     document.getElementById(menuId).addEventListener('click',
-        (e) => scroll(document.getElementById(goalId)))
+        (e) => {
+            scroll(document.getElementById(goalId))
+            e.stopPropagation() // 阻止事件冒泡
+        })
 }
 // function expand(expandEle,goalEle,height){
 //     if (goalEle.style.maxHeight==='unset'){
@@ -61,6 +64,7 @@ function expand(expandId,goalId,display = 'block'){
     scrollById('toPatents','Patents')
     scrollById('toExperiences','Experiences')
     scrollById('toMiscellaneous','Miscellaneous')
+    scrollById('toConferences','Conferences')
     // 点击收起展开事件
     setTimeout(()=>expand('ExpandExperiences','expand1'),100)
 
